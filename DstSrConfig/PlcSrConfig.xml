@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlcSensorConfig_List>
+    <plc ID="PLC-1">
+        <name>PLC-1</name>
+        <portId>COM1</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>N</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>200</rwDelay>
+        <type>M</type>
+        <rwLen>41</rwLen>
+    </plc>
+    <plc ID="PLC-2">
+        <name>PLC-2</name>
+        <portId>COM2</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>E</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>200</rwDelay>
+        <type>D</type>
+        <rwLen>133</rwLen>
+    </plc>
+    <plc ID="PLC-3">
+        <name>PLC-3</name>
+        <portId>COM3</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>N</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>200</rwDelay>
+        <type>M</type>
+        <rwLen>41</rwLen>
+    </plc>
+</PlcSensorConfig_List>

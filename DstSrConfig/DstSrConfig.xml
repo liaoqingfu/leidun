@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DstSensorConfig_List>
+    <dst Id="DST-1">
+        <name>DST-1</name>
+        <dstId>130DF14P07</dstId>
+        <portId>COM2</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>N</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>200</rwDelay>
+        <rwItval>10</rwItval>
+        <rwAds>1</rwAds>
+    </dst>
+    <dst Id="DST-2">
+        <name>DST-2</name>
+        <dstId>130DF14P07</dstId>
+        <portId>COM3</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>N</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>200</rwDelay>
+        <rwItval>10</rwItval>
+        <rwAds>1</rwAds>
+    </dst>
+</DstSensorConfig_List>
