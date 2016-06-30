@@ -209,7 +209,6 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
                 allNum++;
                 precent=100*okNum/allNum;
                 model->setData(index3, "OK");
-
                 QLOG_INFO() << "该传感器传回数据合格！";
             }else
             {
@@ -278,11 +277,11 @@ void MainForm::resetTabview()
 }
 void MainForm::upCountData(float okNum, float ngNum, float allNum, float precent)
 {//更新测量数据
-    QString pct=QString("%1").arg(precent)+QString("%");
+    QString pct=QString::number(precent,'f',2);//取小数点后2位精度
     this->ui->countLb->setText(QString("%1").arg(allNum));
     this->ui->hegeLb->setText(QString("%1").arg(okNum));
     this->ui->buhegeLb->setText(QString("%1").arg(ngNum));
-    this->ui->pctlvLb->setText(pct);
+    this->ui->pctlvLb->setText(pct+"%");
 }
 
 void MainForm::on_clearHisBtn_clicked()
