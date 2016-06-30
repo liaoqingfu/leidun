@@ -2,7 +2,7 @@
   *@brief       距离传感器配置声明文件
   *@author      yuenar
   *@date        16-06-27
-  *@version     0.21
+  *@version     0.20
   *@note        @16-03-28 yuenar v0.10 初版，大致设计布局,初始参数及数据结构
   *@note        @16-03-29 yuenar v0.11 增加载入、保存、设定函数实现
   *@note        @16-03-31 yuenar v0.12 增加添加及删除传感器、串口实现
@@ -11,9 +11,9 @@
   *@note        @16-06-16 yuenar v0.15 格式化指令
   *@note        @16-06-20 yuenar v0.16 模拟测试串口，更新串口配置函数
   *@note        @16-06-21 yuenar v0.17 模拟解析响应函数，正常响应处理
-  *@note        @16-06-23 yuenar v0.19 尝试匹配数据更新到UI界面
-  *@note        @16-06-24 yuenar v0.20 增加清空模型数据槽函数
-  *@note        @16-06-27 yuenar v0.21 解析数据更新到UI及打印异常
+  *@note        @16-06-23 yuenar v0.18 尝试匹配数据更新到UI界面
+  *@note        @16-06-24 yuenar v0.19 增加清空模型数据槽函数
+  *@note        @16-06-27 yuenar v0.20 解析数据更新到UI及打印异常
   *@warning     调用时，注意合理布局
   *@copyright   leidun.co
   */

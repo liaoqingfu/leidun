@@ -27,7 +27,7 @@
 
 MainForm::MainForm(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::MainForm),duration(0),running(true),num(1),basicStr("0"),avgNum(20.0),okNum(0),ngNum(0),allNum(0),precent(0.00)
+    ui(new Ui::MainForm),duration(0),running(true),num(1),basicStr("0"),avgNum(20.0),okNum(0),ngNum(0),allNum(0),precent(0.00),grpId(0)
 {
     ui->setupUi(this);
 
@@ -210,7 +210,7 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
                 precent=100*okNum/allNum;
                 model->setData(index3, "OK");
                 emit countData(okNum,ngNum,allNum,precent);
-                QLOG_INFO() << "该传感器传回数据正常！";
+                QLOG_INFO() << "该传感器传回数据合格！";
             }else
             {
 
@@ -219,7 +219,7 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
                 precent=100-100*ngNum/allNum;
                 model->setData(index3, "NG");
                 emit countData(okNum,ngNum,allNum,precent);
-                QLOG_INFO() << "该传感器传回数据异常！";
+                QLOG_INFO() << "该传感器传回数据不合格！";
             }
         }
     }

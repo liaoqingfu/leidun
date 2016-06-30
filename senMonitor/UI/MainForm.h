@@ -60,7 +60,7 @@ signals:
 private:
     Ui::MainForm *ui;
     qint64 duration;
-    //    int pId;//当前产品号
+    int grpId;//组号
 
 private slots:
     void runPause();//暂停或继续检测产品槽函数

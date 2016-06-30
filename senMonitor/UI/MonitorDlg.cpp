@@ -17,7 +17,7 @@
 
 MonitorDlg::MonitorDlg(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::MonitorDlg)
+    ui(new Ui::MonitorDlg),grpId(0)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Popup);
@@ -35,7 +35,7 @@ void MonitorDlg::on_addBtn_clicked()
     curSrName.clear();
     curGrpName=ui->mtGroupCbBox->currentText();
     curSrName=ui->srNameCbBox->currentText();
-    grpList.append(curGrpName);
+    grpList.append(curGrpName);//不做非空处理
     emit addGrp(grpList);
     emit setSrToPort(curSrName);
 }

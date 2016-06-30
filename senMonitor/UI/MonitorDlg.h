@@ -30,6 +30,11 @@ public:
     QString curGrpName;//当前分组名
     QStringList grpList;//所有分组列表
     QStringList mtrList;//所有测量列表
+
+private:
+    Ui::MonitorDlg *ui;
+    int grpId;//组号
+
 signals:
     void addMtr(QStringList);//添加测量
     void addGrp(QStringList);//添加分组
@@ -45,8 +50,6 @@ private slots:
     void on_addBtn_clicked();//添加测量
     void on_cancelBtn_clicked();//取消添加测量
 
-private:
-    Ui::MonitorDlg *ui;
 };
 
 #endif // MONITORDLG_H
