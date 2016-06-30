@@ -93,6 +93,7 @@ private slots:
     void on_resultTab_pressed(const QModelIndex &index);
     void on_cleanBtn_clicked();//清空所有统计
     void resetTabview();//初始化或重置模型
+    void on_clearHisBtn_clicked();
 };
 
 #endif // MAINFORM_H

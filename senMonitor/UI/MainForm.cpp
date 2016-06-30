@@ -277,10 +277,18 @@ void MainForm::resetTabview()
     ui->resultTab->setModel(model);
 }
 void MainForm::upCountData(float okNum, float ngNum, float allNum, float precent)
-{
+{//更新测量数据
     QString pct=QString("%1").arg(precent)+QString("%");
     this->ui->countLb->setText(QString("%1").arg(allNum));
     this->ui->hegeLb->setText(QString("%1").arg(okNum));
     this->ui->buhegeLb->setText(QString("%1").arg(ngNum));
     this->ui->pctlvLb->setText(pct);
+}
+
+void MainForm::on_clearHisBtn_clicked()
+{//清除所有记录
+    okNum=0;
+    ngNum=0;
+    allNum=0;
+    precent=0.00;
 }
