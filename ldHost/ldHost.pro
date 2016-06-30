@@ -5,10 +5,11 @@ QT += qml quick widgets xml gui core
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    LoginDlg.cpp \
-    MainForm.cpp
+    UI/LoginDlg.cpp \
+    UI/MainForm.cpp \
+    UI/RootWindow.cpp
 
-RESOURCES += qml.qrc
+RESOURCES +=
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
@@ -20,9 +21,11 @@ include(QsLog.pri)
 DISTFILES +=
 
 HEADERS += \
-    LoginDlg.h \
-    MainForm.h
+    UI/LoginDlg.h \
+    UI/MainForm.h \
+    UI/RootWindow.h
 
 FORMS += \
-    LoginDlg.ui \
-    MainForm.ui
+    UI/LoginDlg.ui \
+    UI/MainForm.ui \
+    UI/RootWindow.ui

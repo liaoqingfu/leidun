@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlcSensorConfig_List>
+    <plc ID="PLC-1">
+        <name>PLC-1</name>
+        <portId>COM2</portId>
+        <baudRate>9600</baudRate>
+        <dataBits>8</dataBits>
+        <parity>N</parity>
+        <stopBits>1</stopBits>
+        <rwDelay>10</rwDelay>
+        <type>M</type>
+        <rwLen>1</rwLen>
+    </plc>
+</PlcSensorConfig_List>
