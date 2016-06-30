@@ -170,7 +170,7 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
         QString id=tData.left(2);//id号
         QString data=tData.remove(0,2);//源始数据主体
         bool ok;
-        float sNum=data.toFloat(&ok);//源始数据转浮点型
+        float sNum=data.toFloat(&ok);//源始数据转浮点型，直接就是有正负的浮点数
         float basNum=basicStr.toFloat(&ok);//基准值浮点型
         float ctNum=sNum-basNum;//差值是带有正负号的
         float absNum=sNum>basNum?(sNum-basNum):(basNum-sNum);//绝对为正的差值
@@ -209,7 +209,7 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
                 allNum++;
                 precent=100*okNum/allNum;
                 model->setData(index3, "OK");
-                emit countData(okNum,ngNum,allNum,precent);
+
                 QLOG_INFO() << "该传感器传回数据合格！";
             }else
             {
@@ -218,9 +218,9 @@ void MainForm::flushMtrData(QStringList dIdList,QStringList mtrDataList)
                 allNum++;
                 precent=100-100*ngNum/allNum;
                 model->setData(index3, "NG");
-                emit countData(okNum,ngNum,allNum,precent);
                 QLOG_INFO() << "该传感器传回数据不合格！";
             }
+            emit countData(okNum,ngNum,allNum,precent);
         }
     }
     QLOG_INFO() << "待更新到界面的数据为:"<<dIdList<<mtrDataList;

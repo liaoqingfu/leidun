@@ -597,7 +597,7 @@ void DstSrConfig::readMyCom()
         parseData(le);//解析并反馈
     }else
     {
-        parseData(QString("DR,1,00+%1.%2,2,01+%3.%4,0,02+%5.%6CRLF").arg(demNum1).arg(demNum2).arg(demNum3).arg(demNum4).arg(demNum5).arg(demNum6));
+        parseData(QString("DR,1,00+%1.%2,2,01-%3.%4,0,02+%5.%6CRLF").arg(demNum1).arg(demNum2).arg(demNum3).arg(demNum4).arg(demNum5).arg(demNum6));
     }
 //        QLOG_WARN()<<"串口未接收到数据！";
 }
